@@ -1,0 +1,4 @@
+function BowlingGame() {
+    this.scoreboard = []
+}
+
