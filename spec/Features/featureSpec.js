@@ -3,15 +3,16 @@ describe('Feature Test:', function(){
 
     beforeEach(function() {
         bowlingGame = new BowlingGame();
-        frame = new Frame();
+        frame = new Frame(bowlingGame);
     });
   
     it('I can start a bowling game from scratch', function(){
       expect(bowlingGame.showScoreCard()).toEqual([]);
     });
 
-    it('I can see my current score after my first bowl', function(){
+    it('I can see my current scoreboard after completing a frame', function(){
         frame.bowl(5)
-        expect(bowlingGame.showScoreCard()).toEqual([[5]]);
+        frame.bowl(3)
+        expect(bowlingGame.showScoreCard()).toEqual([[5,3]]);
     });
 });
