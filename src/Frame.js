@@ -21,3 +21,4 @@ Frame.prototype.bowl =  function(number) {
     }
     
 };
+

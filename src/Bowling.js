@@ -13,3 +13,13 @@ BowlingGame.prototype.getScore = function() {
     this.scoreboard = [].concat.apply([], this.scoreboard);
     return this.scoreboard.reduce(getSum);
 };
+
+BowlingGame.prototype.activeFrame = function(){
+    if (this.showScoreCard().length === 10) {
+        return this.showScoreCard().length
+    } 
+    else {
+    return this.showScoreCard().length + 1
+    }
+}
+

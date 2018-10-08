@@ -1,9 +1,8 @@
 describe('Frame Unit Test', function(){
-    var bowlingGame;
-
     beforeEach(function() {
         bowlingGame = new BowlingGame();
         frame = new Frame(bowlingGame);
+        frame2 = new Frame(bowlingGame);
     });
     it('expect each frame to store my score', function(){
         frame.bowl(5)
