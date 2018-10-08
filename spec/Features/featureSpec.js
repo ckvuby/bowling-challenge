@@ -15,4 +15,10 @@ describe('Feature Test:', function(){
         frame.bowl(3)
         expect(bowlingGame.showScoreCard()).toEqual([[5,3]]);
     });
+
+    it('So that I can see my current score', function(){
+        frame.bowl(5)
+        frame.bowl(3)
+        expect(bowlingGame.getScore()).toEqual(8)
+    });
 });
